@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Urbanist;
+  src:  url('./assets/fonts/Urbanist-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Urbanist;
+  src:  url('./assets/fonts/Urbanist-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  src: url('./assets/fonts/LeagueSpartan-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  src: url('./assets/fonts/LeagueSpartan-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
