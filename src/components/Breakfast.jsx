@@ -17,19 +17,19 @@ function Breakfast() {
       <Box padding={2} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{md: 12, lg: 4 }}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={baconSausageBreakfast} isBreakfast={true}/>
               <LazyMenuGridItem item={cfcBreakfast} isBreakfast={true}/>
             </Suspense>
           </Grid>
           <Grid container direction="column" size={{ md: 12, lg: 4 }}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={denverSandwich} isBreakfast={true}/>
               <LazyMenuGridItem item={eggyBurger} isBreakfast={true}/>
             </Suspense>
           </Grid>
           <Grid container direction="column" size={{ md: 12, lg: 4 }} alignItems='stretch'>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={cheeseOmelette} isBreakfast={true}/>
               <LazyMenuGridItem item={breakfastSandwich} isBreakfast={true}/>
               <LazyMenuGridItem item={breakfastWrap} isBreakfast={true}/>

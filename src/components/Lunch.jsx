@@ -40,21 +40,21 @@ function Lunch() {
       <Box padding={2} marginBottom={8} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={dailySpecial} isBreakfast={false}/>
               <LazyMenuGridItem item={koreanBBQBurger} isBreakfast={false}/>
               <LazyMenuGridItem item={porkKatsu} isBreakfast={false}/>
             </Suspense>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={springbankBurger} isBreakfast={false}/>
               <LazyMenuGridItem item={doubleSpringbankBurger} isBreakfast={false}/>
               <LazyMenuGridItem item={pulledPork} isBreakfast={false}/>
             </Suspense>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={spicyChickenWrap} isBreakfast={false}/>
               <LazyMenuGridItem item={chickenBurger} isBreakfast={false}/>
               <LazyMenuGridItem item={deluxeChickenBurger} isBreakfast={false}/>
@@ -81,13 +81,13 @@ function Lunch() {
       <Box padding={2} marginBottom={8} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={clubhouse} isBreakfast={false}/>
               <LazyMenuGridItem item={classicBLT} isBreakfast={false}/>
             </Suspense>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={chickenSalad} isBreakfast={false}/>
             </Suspense>
             { width > 1200 && 
@@ -108,13 +108,13 @@ function Lunch() {
               </Paper>
             </Grid>
             }
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={turkey} isBreakfast={false}/>
               <LazyMenuGridItem item={hamAndCheese} isBreakfast={false}/>
             </Suspense>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={eggSalad} isBreakfast={false}/>
               <LazyMenuGridItem item={tunaSalad} isBreakfast={false}/>
               <LazyMenuGridItem item={grilledCheese} isBreakfast={false}/>
@@ -142,19 +142,19 @@ function Lunch() {
       <Box padding={2} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={cobbSalad} isBreakfast={false}/>
             </Suspense>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={greenSalad} isBreakfast={false}/>
               <LazyMenuGridItem item={chickenFingers} isBreakfast={false}/>
               <LazyMenuGridItem item={fries} isBreakfast={false}/>
             </Suspense>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense>  
+            <Suspense fallback={<div>Loading...</div>}>  
               <LazyMenuGridItem item={kFries} isBreakfast={false}/>
             </Suspense>
             { width > 1200 && 
@@ -175,7 +175,7 @@ function Lunch() {
               </Paper>
             </Grid>
             }
-            <Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
               <LazyMenuGridItem item={gravy} isBreakfast={false}/>
             </Suspense>
           </Grid>
