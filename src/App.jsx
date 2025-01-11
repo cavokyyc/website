@@ -9,7 +9,6 @@ import './fonts.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 
-
 const theme = createTheme({
   palette: {
     text: {
@@ -82,7 +81,6 @@ const theme = createTheme({
 })
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
