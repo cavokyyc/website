@@ -17,7 +17,7 @@ function MenuGridItem(props) {
         >        
         <Box display='flex' flexDirection='column' justifyContent='space-evenly' height='100%'>
           { props.item.img &&
-            <img src={props.item.img} width='100%'/>
+            <img src={props.item.img} width='100%' srcSet={props.item.srcSet} sizes={props.item.sizes}/>
           }
           <Typography sx={{ fontWeight: 'bold', textTransform: 'uppercase' }} paddingY={1} color={props.item.isSpecial && '#DC4200'}>
             {props.item.name}

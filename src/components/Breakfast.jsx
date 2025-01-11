@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import useWindowResize from "../hooks/WindowResize";
 import Grid from '@mui/material/Grid2';
-import MenuGridItem from './MenuGridItem';
 import { baconSausageBreakfast, breakfastSandwich, breakfastWrap, cfcBreakfast, cheeseOmelette, denverSandwich, eggyBurger } from '../assets/menuItems/breakfasts';
+import MenuGridItem from './MenuGridItem';
 
 function Breakfast() {
   const { width } = useWindowResize();

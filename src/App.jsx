@@ -9,7 +9,6 @@ import './fonts.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 
-
 const theme = createTheme({
   palette: {
     text: {
@@ -82,11 +81,10 @@ const theme = createTheme({
 })
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
+      <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' width='100%'>
         <Navbar/>
         <Home/>
         <About/>

@@ -1,12 +1,12 @@
 import { Box, Typography, Paper } from '@mui/material'
 import useWindowResize from "../hooks/WindowResize";
 import Grid from '@mui/material/Grid2';
-import MenuGridItem from './MenuGridItem';
 import { chickenBurger, dailySpecial, deluxeChickenBurger, doubleSpringbankBurger, koreanBBQBurger, porkKatsu, pulledPork, spicyChickenWrap, springbankBurger } from '../assets/menuItems/mains';
 import { clubhouse, chickenSalad, classicBLT, eggSalad, grilledCheese, grilledCheeseWithBacon, hamAndCheese, tunaSalad, turkey } from '../assets/menuItems/sandwiches';
 import { cobbSalad, greenSalad } from '../assets/menuItems/salads';
 import { chickenFingers, fries, gravy, kFries } from '../assets/menuItems/sides';
 import airplaneLogo from '../assets/Airplane_Brown.svg';
+import MenuGridItem from './MenuGridItem';
 
 function Lunch() {
   const { width } = useWindowResize();
