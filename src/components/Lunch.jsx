@@ -6,11 +6,10 @@ import { clubhouse, chickenSalad, classicBLT, eggSalad, grilledCheese, grilledCh
 import { cobbSalad, greenSalad } from '../assets/menuItems/salads';
 import { chickenFingers, fries, gravy, kFries } from '../assets/menuItems/sides';
 import airplaneLogo from '../assets/Airplane_Brown.svg';
-import React, { Suspense } from 'react';
+import MenuGridItem from './MenuGridItem';
 
 function Lunch() {
   const { width } = useWindowResize();
-  const LazyMenuGridItem = React.lazy(() => import('./MenuGridItem'))
 
   return (
     <Box paddingY={width > 730 ? 12 : 4} bgcolor='#F5D9A2'>
@@ -40,25 +39,19 @@ function Lunch() {
       <Box padding={2} marginBottom={8} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={dailySpecial} isBreakfast={false}/>
-              <LazyMenuGridItem item={koreanBBQBurger} isBreakfast={false}/>
-              <LazyMenuGridItem item={porkKatsu} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={dailySpecial} isBreakfast={false}/>
+            <MenuGridItem item={koreanBBQBurger} isBreakfast={false}/>
+            <MenuGridItem item={porkKatsu} isBreakfast={false}/>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={springbankBurger} isBreakfast={false}/>
-              <LazyMenuGridItem item={doubleSpringbankBurger} isBreakfast={false}/>
-              <LazyMenuGridItem item={pulledPork} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={springbankBurger} isBreakfast={false}/>
+            <MenuGridItem item={doubleSpringbankBurger} isBreakfast={false}/>
+            <MenuGridItem item={pulledPork} isBreakfast={false}/>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={spicyChickenWrap} isBreakfast={false}/>
-              <LazyMenuGridItem item={chickenBurger} isBreakfast={false}/>
-              <LazyMenuGridItem item={deluxeChickenBurger} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={spicyChickenWrap} isBreakfast={false}/>
+            <MenuGridItem item={chickenBurger} isBreakfast={false}/>
+            <MenuGridItem item={deluxeChickenBurger} isBreakfast={false}/>
           </Grid>
         </Grid>
       </Box>
@@ -81,15 +74,11 @@ function Lunch() {
       <Box padding={2} marginBottom={8} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={clubhouse} isBreakfast={false}/>
-              <LazyMenuGridItem item={classicBLT} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={clubhouse} isBreakfast={false}/>
+            <MenuGridItem item={classicBLT} isBreakfast={false}/>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={chickenSalad} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={chickenSalad} isBreakfast={false}/>
             { width > 1200 && 
             <Grid item flex={1} display='flex' flexDirection='column'>
               <Paper 
@@ -108,18 +97,14 @@ function Lunch() {
               </Paper>
             </Grid>
             }
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={turkey} isBreakfast={false}/>
-              <LazyMenuGridItem item={hamAndCheese} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={turkey} isBreakfast={false}/>
+            <MenuGridItem item={hamAndCheese} isBreakfast={false}/>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={eggSalad} isBreakfast={false}/>
-              <LazyMenuGridItem item={tunaSalad} isBreakfast={false}/>
-              <LazyMenuGridItem item={grilledCheese} isBreakfast={false}/>
-              <LazyMenuGridItem item={grilledCheeseWithBacon} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={eggSalad} isBreakfast={false}/>
+            <MenuGridItem item={tunaSalad} isBreakfast={false}/>
+            <MenuGridItem item={grilledCheese} isBreakfast={false}/>
+            <MenuGridItem item={grilledCheeseWithBacon} isBreakfast={false}/>
           </Grid>
         </Grid>
       </Box>
@@ -142,21 +127,15 @@ function Lunch() {
       <Box padding={2} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={cobbSalad} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={cobbSalad} isBreakfast={false}/>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={greenSalad} isBreakfast={false}/>
-              <LazyMenuGridItem item={chickenFingers} isBreakfast={false}/>
-              <LazyMenuGridItem item={fries} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={greenSalad} isBreakfast={false}/>
+            <MenuGridItem item={chickenFingers} isBreakfast={false}/>
+            <MenuGridItem item={fries} isBreakfast={false}/>
           </Grid>
           <Grid container direction='column' size={{ md: 12, lg: 4}}>
-            <Suspense fallback={<div>Loading...</div>}>  
-              <LazyMenuGridItem item={kFries} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={kFries} isBreakfast={false}/>
             { width > 1200 && 
             <Grid item flex={1} display='flex' flexDirection='column'>
               <Paper 
@@ -175,9 +154,7 @@ function Lunch() {
               </Paper>
             </Grid>
             }
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={gravy} isBreakfast={false}/>
-            </Suspense>
+            <MenuGridItem item={gravy} isBreakfast={false}/>
           </Grid>
         </Grid>
       </Box>

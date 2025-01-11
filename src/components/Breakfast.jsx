@@ -2,11 +2,10 @@ import { Box, Typography } from '@mui/material'
 import useWindowResize from "../hooks/WindowResize";
 import Grid from '@mui/material/Grid2';
 import { baconSausageBreakfast, breakfastSandwich, breakfastWrap, cfcBreakfast, cheeseOmelette, denverSandwich, eggyBurger } from '../assets/menuItems/breakfasts';
-import React, { Suspense } from 'react';
+import MenuGridItem from './MenuGridItem';
 
 function Breakfast() {
   const { width } = useWindowResize();
-  const LazyMenuGridItem = React.lazy(() => import('./MenuGridItem'))
 
   return (
     <Box paddingY={width > 730 ? 12 : 4} width="100%" bgcolor='#F1E1C9' marginBottom={12}>
@@ -17,23 +16,17 @@ function Breakfast() {
       <Box padding={2} display='flex' justifyContent='center' textAlign='left'>
         <Grid container spacing={2}>
           <Grid container direction='column' size={{md: 12, lg: 4 }}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={baconSausageBreakfast} isBreakfast={true}/>
-              <LazyMenuGridItem item={cfcBreakfast} isBreakfast={true}/>
-            </Suspense>
+            <MenuGridItem item={baconSausageBreakfast} isBreakfast={true}/>
+            <MenuGridItem item={cfcBreakfast} isBreakfast={true}/>
           </Grid>
           <Grid container direction="column" size={{ md: 12, lg: 4 }}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={denverSandwich} isBreakfast={true}/>
-              <LazyMenuGridItem item={eggyBurger} isBreakfast={true}/>
-            </Suspense>
+            <MenuGridItem item={denverSandwich} isBreakfast={true}/>
+            <MenuGridItem item={eggyBurger} isBreakfast={true}/>
           </Grid>
           <Grid container direction="column" size={{ md: 12, lg: 4 }} alignItems='stretch'>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyMenuGridItem item={cheeseOmelette} isBreakfast={true}/>
-              <LazyMenuGridItem item={breakfastSandwich} isBreakfast={true}/>
-              <LazyMenuGridItem item={breakfastWrap} isBreakfast={true}/>
-            </Suspense>
+            <MenuGridItem item={cheeseOmelette} isBreakfast={true}/>
+            <MenuGridItem item={breakfastSandwich} isBreakfast={true}/>
+            <MenuGridItem item={breakfastWrap} isBreakfast={true}/>
           </Grid>
         </Grid>
       </Box>
